@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Система учета и анализа успеваемости студентов">
+  <title>{{ page_title or 'Учет успеваемости' }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('main.index') }}"><span class="brand-mark">A</span> Academic<span class="brand-light">Track</span></a>
+    <span class="topbar-label">СИСТЕМА УЧЕТА УСПЕВАЕМОСТИ</span>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer>Academic Performance Tracking <span>·</span> Учебный проект</footer>
+</body>
+</html>
